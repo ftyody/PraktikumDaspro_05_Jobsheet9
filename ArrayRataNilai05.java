@@ -3,7 +3,14 @@ public class ArrayRataNilai05 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
-        int[] nilaiMhs = new int[10];
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        int jumlahMahasiswa = sc.nextInt();
+        while (jumlahMahasiswa <= 0) {
+            System.out.print("Jumlah mahasiswa harus lebih dari 0. Masukkan kembali: ");
+            jumlahMahasiswa = sc.nextInt();
+        }
+
+        int[] nilaiMhs = new int[jumlahMahasiswa];
         int total = 0;
         double rataRata;
 
